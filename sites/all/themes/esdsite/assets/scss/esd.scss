@@ -6,3 +6,9 @@ html {
 	height: 100%;
 	font-family: arial;
 }
+
+
+@import
+	'regions/hero.scss',
+	'regions/navigation.scss'
+	;
