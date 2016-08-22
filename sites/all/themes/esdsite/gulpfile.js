@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssmin = require('gulp-cssmin'),
-	rename = require('gulp-rename')
+	rename = require('gulp-rename'),
+    babel = require('gulp-babel')
 	;
 	
 gulp.task('sass', function () {
@@ -21,7 +22,13 @@ gulp.task('sass', function () {
 });
 
 gulp.task('compress', function() {
-  gulp.src('src/js/*.js')
+  gulp.src(['assets/js/*.js', 'node_modules/foundation-sites/js/foundation.core.js', 'node_modules/foundation-sites/js/foundation.util.mediaQuery.js', 'node_modules/foundation-sites/vendor/modernizr/modernizr.js', 'node_modules/foundation-sites/vendor/jquery/dist/jquery.js'])
+    .pipe(babel({
+            presets: ['es2015'],
+            plugins: ['transform-remove-strict-mode'],
+            only: ['node_modules/foundation-sites/js/*.js'],
+            compact: true
+        }))
     .pipe(minify({
         ext:{
             src:'.js',

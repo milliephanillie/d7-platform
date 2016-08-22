@@ -1,14 +1,11 @@
-body,
-html {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	font-family: arial;
-}
-
-
 @import
-	'regions/hero.scss',
-	'regions/navigation.scss'
+	'node_modules/foundation-sites/scss/_global.scss',
+	'node_modules/foundation-sites/scss/grid/_grid.scss'
 	;
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family:sans-serif;
+}
