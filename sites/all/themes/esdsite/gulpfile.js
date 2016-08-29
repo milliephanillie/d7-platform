@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 	;
 	
 gulp.task('sass', function () {
-	gulp.src('assets/scss/*.scss')
+	gulp.src('src/scss/*.scss')
 	 .pipe(sass().on('error', sass.logError))
      .pipe(autoprefixer({
         browsers: ['last 2 versions'],
@@ -33,6 +33,6 @@ gulp.task('compress', function() {
 });
 
 gulp.task('watch', function () {
-	gulp.watch('assets/scss/**/*.scss', ['sass']);
-	gulp.watch('assets/js/**/*.js', ['compress']);
+	gulp.watch('src/scss/**/*.scss', ['sass']);
+	gulp.watch('src/js/**/*.js', ['compress']);
 });

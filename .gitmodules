@@ -1,0 +1,6 @@
+[submodule "sites/all/modules/contrib/paragraphs"]
+	path = sites/all/modules/contrib/paragraphs
+	url = https://git.drupal.org/project/paragraphs.git
+[submodule "sites/all/modules/contrib/entity"]
+	path = sites/all/modules/contrib/entity
+	url = https://git.drupal.org/project/entity.git
