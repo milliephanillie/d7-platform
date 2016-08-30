@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cssmin = require('gulp-cssmin'),
-	rename = require('gulp-rename')
+	rename = require('gulp-rename'),
+	autoguide = require('autoguide')
 	;
 	
 gulp.task('sass', function () {
@@ -36,3 +37,19 @@ gulp.task('watch', function () {
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch('src/js/**/*.js', ['compress']);
 });
+
+gulp.task('autoguide', function() {
+	autoguide({
+	  src: [
+	    'scss'
+	  ],
+	  dest: 'public/styleguide',
+	  templateVars: {
+	    title: 'Super Awesome Styleguide'
+	  }
+	}, function (err, success) {
+	  if (!err)
+	    console.log ('Super Awesome Styleguide created!');
+	});
+});
+

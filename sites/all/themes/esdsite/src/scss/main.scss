@@ -9,7 +9,10 @@ html {
 
 
 @import
+	'typography/fonts.scss',
+	'typography/typesets.scss',
 	'foundation/foundation',
 	'regions/hero.scss',
+	'regions/main-nav.scss',
 	'regions/navigation.scss'
 	;

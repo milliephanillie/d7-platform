@@ -30,4 +30,4 @@ features[] = secondary_menu
 ;; Theme Settings
 ;;;;;;;;;;;;;;;;;;;;;
 screenshot = screenshot.png
-stylesheets[all][] = css/esd.min.css
+stylesheets[all][] = css/main.min.css
