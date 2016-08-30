@@ -4,3 +4,7 @@
 [submodule "sites/all/modules/contrib/entity"]
 	path = sites/all/modules/contrib/entity
 	url = https://git.drupal.org/project/entity.git
+[submodule "sites/all/modules/contrib/backup_migrate"]
+	path = sites/all/modules/contrib/backup_migrate
+	url = https://git.drupal.org/project/backup_migrate.git
+	branch = 7.x-3.x
