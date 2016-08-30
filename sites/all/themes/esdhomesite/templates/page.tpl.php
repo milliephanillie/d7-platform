@@ -1,3 +1,7 @@
+<?php
+	
+?>
+
 <header>
 	
 	<!-- Main Navigation -->
@@ -54,6 +58,20 @@
 	</section>
 	
 </header>
+
+
+	<div class="page-wrapper">
+		<div class="row">
+			<div class="column small-12">
 	
 	
+	
+	<?php
+		print render($page['content']);
+	?>
+	
+	
+			</div>
+		</div>
+	</div>
 
