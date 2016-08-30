@@ -6,23 +6,49 @@
     "start": "nodemon ./bin/www",
     "postinstall": "sh npm_clean.sh"
   },
-  "dependencies": {
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.13.4",
-    "foundation-sites": "^6.2.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
-  },
   "devDependencies": {
-    "autoguide": "^0.1.0",
+    "browser-sync": "^2.14.0",
+    "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
+    "buffer": "^4.9.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cssmin": "^0.1.7",
-    "gulp-minify": "0.0.13",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.0.0",
+    "streamify": "^0.2.6",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.2.3",
+    "jquery": "^3.1.0",
+    "jquery-ui": "^1.12.0"
+  },
+  "browser": {
+    "jquery": "./node_modules/foundation-sites/vendor/jquery/dist/jquery.js",
+    "foundation": "./node_modules/foundation-sites/dist/foundation.js",
+    "foundationCore": "./node_modules/foundation-sites/dist/plugins/foundation.core.js",
+    "foundationUtilMediaQuery": "./node_modules/foundation-sites/dist/plugins/foundation.util.mediaQuery.js",
+    "foundationUtilTriggers": "./node_modules/foundation-sites/dist/plugins/foundation.util.triggers.js",
+    "foundationUtilMotion": "./node_modules/foundation-sites/dist/plugins/foundation.util.motion.js",
+    "foundationOffCanvas" : "./node_modules/foundation-sites/dist/plugins/foundation.offcanvas.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "foundation": "foundation",
+    "foundationUtilMediaQuery": "foundationUtilMediaQuery",
+    "foundationUtilTriggers": "foundationUtilTriggers",
+    "foundationUtilMotion": "foundationUtilMotion",
+    "foundationOffCanvas": "foundationOffCanvas"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
   }
 }
+
