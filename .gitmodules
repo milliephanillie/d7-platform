@@ -8,3 +8,11 @@
 	path = sites/all/modules/contrib/backup_migrate
 	url = https://git.drupal.org/project/backup_migrate.git
 	branch = 7.x-3.x
+[submodule "sites/all/modules/contrib/inline_entity_form"]
+	path = sites/all/modules/contrib/inline_entity_form
+	url = https://git.drupal.org/project/inline_entity_form.git
+	branch = 7.x-1.x
+[submodule "sites/all/modules/contrib/entityreference"]
+	path = sites/all/modules/contrib/entityreference
+	url = https://git.drupal.org/project/entityreference.git
+	branch = 7.x-1.x

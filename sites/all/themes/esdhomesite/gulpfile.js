@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	streamify    = require('gulp-streamify'),
 	cssmin = require('gulp-cssmin')
-	autoguide = require('./autoguide');
+	;
 	
 var onError = function(err) {
     console.log(err.message);
@@ -33,7 +33,7 @@ function bundle() {
         .pipe(source('bundle.js'))
         .pipe(buffer())
         .pipe(streamify(uglify()))
-        .pipe(gulp.dest('./assets/js'))
+        .pipe(gulp.dest('./js'))
         .pipe(browserSync.stream());
 }
 	
@@ -44,10 +44,10 @@ gulp.task('sass', function () {
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    .pipe(gulp.dest('assets/css'))
+    .pipe(gulp.dest('css'))
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('watch', function () {
@@ -55,6 +55,7 @@ gulp.task('watch', function () {
 	gulp.watch('src/js/bundle/*.js', ['js']);
 });
 
+/*
 gulp.task('autoguide', function (done) {
 	autoguide({
 		src: ['src/scss','src/js'],
@@ -65,5 +66,5 @@ gulp.task('autoguide', function (done) {
 		done();
 	});
 })
-
+*/
 	

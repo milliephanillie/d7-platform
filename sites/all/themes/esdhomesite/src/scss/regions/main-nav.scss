@@ -3,6 +3,9 @@ header {
 		background: $primary-color;
 		padding: $vr;
 		div.logo {
+			a {
+				text-decoration: none;
+			}
 			span {
 				color: white;
 				&:first-child {

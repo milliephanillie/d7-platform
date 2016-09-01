@@ -1,0 +1,13 @@
+div#tab-nav {
+	ul.tabs.primary {
+		background: white;
+		li.active {
+			a.active {
+				color: $black !important;
+				span {
+					color: $black !important;
+				}
+			}
+		}
+	}
+}

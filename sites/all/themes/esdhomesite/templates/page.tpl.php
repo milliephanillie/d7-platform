@@ -10,10 +10,12 @@
 		<div class="row align-middle">
 				<div class="column small-3">
 					<div class="logo proxima-bold">
-						<span>Empire State
-						</span><br />
-						<span>Development
-						</span>
+						<a href="<?php print $GLOBALS['base_url']; ?>">
+							<span>Empire State
+							</span><br />
+							<span>Development
+							</span>
+						</a>
 					</div>
 				</div>
 				<div class="column small-8 small-offset-1">
@@ -64,7 +66,19 @@
 		<div class="row">
 			<div class="column small-12">
 	
-	
+	<?php if ($page['highlighted']): ?>
+		<div id="highlighted"><?php print render($page['highlighted']); ?></div>
+	<?php endif; ?>
+
+    <?php if ($tabs): ?>
+    	<div id="tab-nav">
+    		<?php print render($tabs); ?>
+    	</div>
+    <?php endif; ?>
+    
+    <?php print render($page['help']); ?>
+    
+    <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
 	
 	<?php
 		print render($page['content']);
